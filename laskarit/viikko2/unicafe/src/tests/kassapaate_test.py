@@ -61,7 +61,7 @@ class TestKassapaate(unittest.TestCase):
         self.assertEqual(self.kassapaate.maukkaat, 1)
         self.assertEqual(self.kassapaate.kassassa_rahaa, 100000)
 
-    def test_osta_maukkaasti_kortilla_ei_rahaa(self):
+    def test_osta_maukkaasti_kortilla_saldo_ei_riita(self):
         kortti = Maksukortti(100)
         onnistuminen = self.kassapaate.syo_maukkaasti_kortilla(kortti)
         self.assertEqual(onnistuminen, False)

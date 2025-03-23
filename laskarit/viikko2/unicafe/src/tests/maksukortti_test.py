@@ -15,16 +15,14 @@ class TestMaksukortti(unittest.TestCase):
         self.maksukortti.lataa_rahaa(1000)
         self.assertEqual(self.maksukortti.saldo_euroina(), 20.0)
 
-    def test_ota_rahaa_kun_saldo_riittaa(self):
+    def test_ota_rahaa_saldo_riittaa(self):
         self.maksukortti.ota_rahaa(100)
         self.assertEqual(self.maksukortti.saldo_euroina(), 9.0)
-
-    def test_ota_rahaa_kun_saldo_ei_riita(self):
-        self.maksukortti.ota_rahaa(2000)
-        self.assertEqual(self.maksukortti.saldo_euroina(), 10.0)
-
-    def test_ota_rahaa_true(self):
         self.assertEqual(self.maksukortti.ota_rahaa(100), True)
 
-    def test_ota_rahaa_false(self):
+    def test_ota_rahaa_saldo_ei_riita(self):
+        self.maksukortti.ota_rahaa(2000)
+        self.assertEqual(self.maksukortti.saldo_euroina(), 10.0)
         self.assertEqual(self.maksukortti.ota_rahaa(2000), False)
+
+        
