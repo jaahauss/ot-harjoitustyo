@@ -1,5 +1,7 @@
 <h1>Harjoitustyön kuvaus</h1>
 
-Jokin _vuoropohjainen peli_, ehkä **laivanupotus**?
+_Vuoropohjainen_ peli, **laivanupotus**, tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
 [Laskarit-alikansio](laskarit/)
+[Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
+[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
