@@ -20,8 +20,14 @@ Vain yksi käyttäjärooli, pelaaja eli _normaali käyttäjä_.
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä voi aloittaa uuden pelin (pelilauta generoituu automaattisesti) ja kutsua toisen rekisteröityneen käyttäjän pelaamaan.
+- Käyttäjä voi aloittaa uuden pelin (pelilauta generoituu automaattisesti)
+- Käyttäjä voi kutsua toisen rekisteröityneen käyttäjän pelaamaan.
 - Käyttäjä voi tehdä uuden siirron aloitetussa pelissä (jos on hänen vuoronsa).
+- Käyttäjä näkee oman siirtonsa tuloksen:
+  - Osui
+  - Osui ja upposi
+  - Ohi
+- Käyttäjä näkee toisen pelaajan tekemän siirron.
 - Käyttäjä voi kirjautua ulos näkymästä.
 
 ## Jatkokehitysideoita
