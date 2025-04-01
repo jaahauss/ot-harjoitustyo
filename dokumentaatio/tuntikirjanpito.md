@@ -11,4 +11,6 @@
 |       | 0.5  | ensimmäiset testit  |
 |       | 0.5  | invoke-tehtävät  |
 |       | 0.5  | dokumentaation päivitys  |
-|       | **8.5**| **yhteensä**            |
+|  1.4. | 0.5  | testikonfiguraation päivitys  |
+|       | 0.5  | virheidenkäsittelyn toteutus  |
+|       | **9.5**| **yhteensä**            |

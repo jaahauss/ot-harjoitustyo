@@ -26,10 +26,11 @@ class GameView:
         logout_button = ttk.Button(
             master=self._frame,
             text="Logout",
+            width=20,
             command=self._logout_handler
         )
         
         self._frame.grid_columnconfigure(0, weight=1, minsize=500)
 
-        logout_button.grid(padx=5, pady=5, sticky=constants.EW)
+        logout_button.grid(padx=5, pady=5, sticky=constants.E)
         

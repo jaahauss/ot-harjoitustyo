@@ -1,4 +1,4 @@
-from tkinter import ttk, StringVar, constants
+from tkinter import ttk, constants, messagebox
 from services.game_service import game_service, InvalidCredentialsError
 
 
@@ -10,8 +10,6 @@ class LoginView:
         self._frame = None
         self._username_entry = None
         self._password_entry = None
-        self._error_variable = None
-        self._error_label = None
 
         self._start()
 
@@ -29,19 +27,10 @@ class LoginView:
             game_service.login(username, password)
             self._handle_login()
         except InvalidCredentialsError:
-            self._error_variable.set("Invalid username or password")
-            self._error_label.grid()
+            messagebox.showerror("Error", "Invalid username or password")
 
     def _start(self):
         self._frame = ttk.Frame(master=self._root)
-
-        self._error_variable = StringVar()
-        self._error_label = ttk.Label(
-            master=self._frame,
-            textvariable=self._error_variable,
-            foreground="red"
-        )
-        self._error_label.grid(padx=5, pady=5)
 
         username_label = ttk.Label(master=self._frame, text="Username")
         self._username_entry = ttk.Entry(master=self._frame)
@@ -58,18 +47,18 @@ class LoginView:
         login_button = ttk.Button(
             master=self._frame,
             text="Login",
+            width=20,
             command=self._login_handler
         )
 
         create_user_button = ttk.Button(
             master=self._frame,
             text="Create new user",
+            width=20,
             command=self._handle_create
         )
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=500)
 
-        login_button.grid(padx=5, pady=5, sticky=constants.EW)
-        create_user_button.grid(padx=5, pady=5, sticky=constants.EW)
-
-        self._error_label.grid_remove()
+        login_button.grid(padx=5, pady=5, sticky=constants.E)
+        create_user_button.grid(padx=5, pady=5, sticky=constants.E)
