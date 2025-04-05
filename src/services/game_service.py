@@ -5,11 +5,14 @@ from repositories.user_repository import (
     user_repository as default_user_repository
 )
 
+
 class InvalidCredentialsError(Exception):
     pass
 
+
 class UsernameExistsError(Exception):
     pass
+
 
 class GameService:
     def __init__(
@@ -43,18 +46,19 @@ class GameService:
         if login:
             self._user = user
         return user
-    
+
     def start(self):
         pygame.init()
         pygame.display.set_caption("Battleship")
         screen = pygame.display.set_mode((1200, 530))
         running = True
         while running:
-            screen.fill((0, 0, 255))    
+            screen.fill((0, 0, 255))
             pygame.display.flip()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
         pygame.quit()
+
 
 game_service = GameService()

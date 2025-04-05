@@ -26,7 +26,7 @@ class CreateUserView:
         if len(username) == 0:
             messagebox.showerror("Error", "Username is required")
             return
-        
+
         if len(password) == 0:
             messagebox.showerror("Error", "Password is required")
             return
@@ -35,7 +35,8 @@ class CreateUserView:
             game_service.create_user(username, password)
             self._handle_create()
         except UsernameExistsError:
-            messagebox.showerror("Error", f"Username {username} already exists")
+            messagebox.showerror(
+                "Error", f"Username {username} already exists")
 
     def _start(self):
         self._frame = ttk.Frame(master=self._root)
@@ -45,7 +46,7 @@ class CreateUserView:
 
         username_label.grid(padx=5, pady=5, sticky=constants.W)
         self._username_entry.grid(padx=5, pady=5, sticky=constants.EW)
-        
+
         password_label = ttk.Label(master=self._frame, text="Password")
         self._password_entry = ttk.Entry(master=self._frame)
 
@@ -70,4 +71,3 @@ class CreateUserView:
 
         create_user_button.grid(padx=5, pady=5, sticky=constants.E)
         login_button.grid(padx=5, pady=5, sticky=constants.E)
-
