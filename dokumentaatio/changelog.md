@@ -12,3 +12,4 @@
 ## Viikko 4
 
 - Pelin aloitus toteutettu
+- Pylint otettu käyttöön

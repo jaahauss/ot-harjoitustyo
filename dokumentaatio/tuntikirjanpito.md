@@ -15,4 +15,6 @@
 |       | 0.5  | virheidenkäsittelyn toteutus  |
 |       | 0.5  | dokumentaation päivitys  |
 |  5.4  | 1  | pelin aloitus toteutettu  |
-|       | **11.5**| **yhteensä**            |
+|       | 0.5  | pylint otettu käyttöön  |
+|       | 1  | luokka-/pakkauskaavio tehty  |
+|       | **13**| **yhteensä**            |

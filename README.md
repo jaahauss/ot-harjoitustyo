@@ -13,6 +13,7 @@ Tällä hetkellä on toteutettu alustava käyttöliittymä, käyttäjänhallinta
 - [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
 - [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 - [Changelog](dokumentaatio/changelog.md)
+- [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
