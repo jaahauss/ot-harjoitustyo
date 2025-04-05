@@ -14,4 +14,5 @@
 |  1.4. | 0.5  | testikonfiguraation päivitys  |
 |       | 0.5  | virheidenkäsittelyn toteutus  |
 |       | 0.5  | dokumentaation päivitys  |
-|       | **10.5**| **yhteensä**            |
+|  5.4  | 1  | pelin aloitus toteutettu  |
+|       | **11.5**| **yhteensä**            |

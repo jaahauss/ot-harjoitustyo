@@ -8,3 +8,7 @@
 - Invoke-tehtävät luotu
 - Lisätty GameService-luokka, joka vastaa sovelluslogiikan koodista
 - Käyttäjä voi luoda tunnukset ja kirjautua sisään/ulos
+
+## Viikko 4
+
+- Pelin aloitus toteutettu

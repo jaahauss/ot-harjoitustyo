@@ -12,15 +12,15 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-  - Käyttäjätunnuksen täytyy olla uniikki, muuten järjestelmä ilmoittaa tästä
-- Käyttäjä voi kirjautua järjestelmään
-  - Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus ja salasana kirjautumislomakkeelle
-  - Jos käyttäjätunnus tai salasana ei täsmää, ilmoittaa järjestelmä tästä
+- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen ***tehty***
+  - Käyttäjätunnuksen täytyy olla uniikki, muuten järjestelmä ilmoittaa tästä ***tehty***
+- Käyttäjä voi kirjautua järjestelmään ***tehty***
+  - Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus ja salasana kirjautumislomakkeelle ***tehty***
+  - Jos käyttäjätunnus tai salasana ei täsmää, ilmoittaa järjestelmä tästä ***tehty***
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä voi aloittaa uuden pelin
+- Käyttäjä voi aloittaa uuden pelin ***tehty***
 - Sovellus generoi pelilaudan
 - Käyttäjä voi tehdä uuden siirron aloitetussa pelissä (jos on hänen vuoronsa).
 - Käyttäjä näkee oman siirtonsa tuloksen:
@@ -28,7 +28,7 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
   - Osui ja upposi
   - Ohi
 - Käyttäjä näkee _vastustajan_ tekemän siirron.
-- Käyttäjä voi kirjautua ulos näkymästä.
+- Käyttäjä voi kirjautua ulos näkymästä. ***tehty***
 
 ## Jatkokehitysideoita
 
