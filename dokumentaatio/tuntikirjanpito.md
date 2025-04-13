@@ -17,4 +17,7 @@
 |  5.4  | 1  | pelin aloitus toteutettu  |
 |       | 0.5  | pylint otettu käyttöön  |
 |       | 1  | luokka-/pakkauskaavio tehty  |
-|       | **13**| **yhteensä**            |
+|  13.4  | 1  | pelilaudan luomisen toteutus aloitettu  |
+|  14.4  | 5  | pelilaudan, laivojen ja liikkumisen toteutus  |
+|       | 1  | kansiorakenteen uudelleenjärjestely  |
+|       | **20**| **yhteensä**            |

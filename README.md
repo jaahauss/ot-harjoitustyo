@@ -4,10 +4,6 @@
 
 Vuoropohjainen laivanupotus-peli, jossa tarkoituksena upottaa toisen pelaajan kaikki laivat. Tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
-## Tämänhetkinen tilanne
-
-Tällä hetkellä on toteutettu alustava käyttöliittymä, käyttäjänhallinta, ensimmäiset testit ja invoke-tehtävät.
-
 ## Dokumentaatio
 
 - [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)

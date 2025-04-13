@@ -21,7 +21,9 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 ### Kirjautumisen jälkeen
 
 - Käyttäjä voi aloittaa uuden pelin ***tehty***
-- Sovellus generoi pelilaudan
+- Sovellus generoi pelilaudan ***tehty***
+- Sovellus generoi _vastustajan_ pelilaudan.
+- Käyttäjä voi liikuttaa kohdistinta pelilaudalla ***tehty***
 - Käyttäjä voi tehdä uuden siirron aloitetussa pelissä (jos on hänen vuoronsa).
 - Käyttäjä näkee oman siirtonsa tuloksen:
   - Osui

@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from services.game_service import game_service
+from gamefiles.game_service import game_service
 
 
 class GameView:

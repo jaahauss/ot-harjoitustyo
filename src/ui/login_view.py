@@ -1,5 +1,5 @@
 from tkinter import ttk, constants, messagebox
-from services.game_service import game_service, InvalidCredentialsError
+from gamefiles.game_service import game_service, InvalidCredentialsError
 
 
 class LoginView:

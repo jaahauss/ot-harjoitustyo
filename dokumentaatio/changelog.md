@@ -13,3 +13,8 @@
 
 - Pelin aloitus toteutettu
 - Pylint otettu käyttöön
+
+## Viikko 4
+
+- Pelilaudan ja laivojen luominen toteutettu
+- Kohdistimen liikuttaminen toteutettu
