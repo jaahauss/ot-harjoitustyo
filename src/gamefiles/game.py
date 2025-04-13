@@ -48,19 +48,19 @@ class Game:
     def _add_ships(self, board):
         ship_lengths = [5, 4, 3, 2, 1]
         for i in range(5):
-            start_x, start_y, direction = self._find_start(ship_lengths[i])
+            start_y, start_x, direction = self._find_start(ship_lengths[i])
             if direction == "down":
                 for n in range(ship_lengths[i]):
-                    if board[start_x+n][start_y] == 2:
-                        board[start_x+n][start_y] = 3
+                    if board[start_y+n][start_x] == 2:
+                        board[start_y+n][start_x] = 3
                     else:
-                        board[start_x+n][start_y] = 1
+                        board[start_y+n][start_x] = 1
             else:
                 for n in range(ship_lengths[i]):
-                    if board[start_x][start_y+n] == 2:
-                        board[start_x][start_y+n] = 3
+                    if board[start_y][start_x+n] == 2:
+                        board[start_y][start_x+n] = 3
                     else:
-                        board[start_x][start_y+n] = 1
+                        board[start_y][start_x+n] = 1
         return board
 
     def _find_start(self, length):

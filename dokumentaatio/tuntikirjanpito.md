@@ -20,4 +20,5 @@
 |  13.4  | 1  | pelilaudan luomisen toteutus aloitettu  |
 |  14.4  | 5  | pelilaudan, laivojen ja liikkumisen toteutus  |
 |       | 1  | kansiorakenteen uudelleenjärjestely  |
-|       | **20**| **yhteensä**            |
+|       | 1  | koodin puhdistus, kuvan muokkaus  |
+|       | **21**| **yhteensä**            |
