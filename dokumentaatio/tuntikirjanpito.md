@@ -21,4 +21,6 @@
 |  14.4  | 5  | pelilaudan, laivojen ja liikkumisen toteutus  |
 |       | 1  | kansiorakenteen uudelleenjärjestely  |
 |       | 1  | koodin puhdistus, kuvan muokkaus  |
-|       | **21**| **yhteensä**            |
+|  14.4  | 0.5  | käyttöliittymää selkeytetty  |
+|       | 1  | dokumentaation päivitys  |
+|       | **22.5**| **yhteensä**            |
