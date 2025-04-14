@@ -43,7 +43,19 @@ class Game:
         )
 
     def move_highlight(self, dx=0, dy=0):
-        self.highlight.rect.move_ip(dx, dy)
+        if self._check_collision(dx, dy):
+            self.highlight.rect.move_ip(dx, dy)
+
+    def _check_collision(self, dx, dy):
+        if dx < 0 and self.highlight.rect.x <= 0:
+            return False
+        if dx > 0 and self.highlight.rect.x >= 450:
+            return False
+        if dy < 0 and self.highlight.rect.y <= 0:
+            return False
+        if dy > 0 and self.highlight.rect.y >= 450:
+            return False
+        return True
 
     def _add_ships(self, board):
         ship_lengths = [5, 4, 3, 2, 1]

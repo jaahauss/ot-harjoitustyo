@@ -55,14 +55,14 @@ class CreateUserView:
 
         create_user_button = ttk.Button(
             master=self._frame,
-            text="Create new user",
+            text="Create",
             width=20,
             command=self._create_user_handler
         )
 
         login_button = ttk.Button(
             master=self._frame,
-            text="Login",
+            text="Back to login page",
             width=20,
             command=self._handle_login
         )
