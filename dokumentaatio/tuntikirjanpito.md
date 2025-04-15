@@ -24,4 +24,5 @@
 |  14.4  | 0.5  | käyttöliittymää selkeytetty  |
 |       | 1  | dokumentaation päivitys  |
 |  15.4. | 0.5  | kansiorakenteen järjestely  |
-|       | **23**| **yhteensä**            |
+|       | 1  | testien lisäys  |
+|       | **24**| **yhteensä**            |
