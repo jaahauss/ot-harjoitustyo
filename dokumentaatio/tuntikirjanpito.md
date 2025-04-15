@@ -23,4 +23,5 @@
 |       | 1  | koodin puhdistus, kuvan muokkaus  |
 |  14.4  | 0.5  | käyttöliittymää selkeytetty  |
 |       | 1  | dokumentaation päivitys  |
-|       | **22.5**| **yhteensä**            |
+|  15.4. | 0.5  | kansiorakenteen järjestely  |
+|       | **23**| **yhteensä**            |

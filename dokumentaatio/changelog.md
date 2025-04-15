@@ -16,5 +16,7 @@
 
 ## Viikko 4
 
+- Gamefiles lisätty
 - Pelilaudan ja laivojen luominen toteutettu
 - Kohdistimen liikuttaminen toteutettu
+- Format-task lisätty

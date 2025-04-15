@@ -1,5 +1,5 @@
 from tkinter import ttk, messagebox, constants
-from gamefiles.game_service import game_service, UsernameExistsError
+from services.game_service import game_service, UsernameExistsError
 
 
 class CreateUserView:
