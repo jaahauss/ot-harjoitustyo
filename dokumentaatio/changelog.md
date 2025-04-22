@@ -14,9 +14,14 @@
 - Pelin aloitus toteutettu
 - Pylint otettu käyttöön
 
-## Viikko 4
+## Viikko 5
 
 - Gamefiles lisätty
 - Pelilaudan ja laivojen luominen toteutettu
 - Kohdistimen liikuttaminen toteutettu
 - Format-task lisätty
+
+## Viikko 6
+
+- Laivojen ampuminen toteutettu
+- Laskurit ampumisille ja osumille lisätty

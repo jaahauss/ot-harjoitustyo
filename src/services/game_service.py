@@ -54,8 +54,7 @@ class GameService:
         return user
 
     def start(self):
-        board = [[2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        board = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -67,14 +66,14 @@ class GameService:
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
         cell_size = 50
 
+        pygame.init()
         pygame.display.set_caption("Battleship")
-        screen = pygame.display.set_mode((500, 500))
+        screen = pygame.display.set_mode((500, 560))
         game = Game(board, cell_size)
         event_queue = EventQueue()
         renderer = Renderer(screen, game)
         clock = Clock()
         game_loop = GameLoop(game, renderer, event_queue, clock, cell_size)
-        pygame.init()
         game_loop.start()
 
 

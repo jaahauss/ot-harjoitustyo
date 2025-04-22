@@ -2,6 +2,8 @@ import random
 import pygame
 from gamefiles.sprites.sea import Sea
 from gamefiles.sprites.ship import Ship
+from gamefiles.sprites.hit import Hit
+from gamefiles.sprites.miss import Miss
 from gamefiles.sprites.highlight import Highlight
 
 
@@ -10,18 +12,26 @@ class Game:
         self.cell_size = cell_size
         self.ships = pygame.sprite.Group()
         self.seas = pygame.sprite.Group()
+        self.hits = pygame.sprite.Group()
+        self.misses = pygame.sprite.Group()
         self.highlight = None
         self.all_sprites = pygame.sprite.Group()
+        self.shots = 0
+        self.shots_to_target = 0
 
-        new_board = self._add_ships(board)
-        self._initialize_sprites(new_board)
+        target_x = 0
+        target_y = 0
 
-    def _initialize_sprites(self, board):
-        height = len(board)
-        width = len(board[0])
+        self.board = self._add_ships(board)
+        self._initialize_sprites(target_x, target_y)
+
+    def _initialize_sprites(self, target_x, target_y):
+        height = len(self.board)
+        width = len(self.board[0])
+        self.highlight = Highlight(target_x, target_y)
         for y in range(height):
             for x in range(width):
-                cell = board[y][x]
+                cell = self.board[y][x]
                 normalized_x = x * self.cell_size
                 normalized_y = y * self.cell_size
 
@@ -29,16 +39,16 @@ class Game:
                     self.seas.add(Sea(normalized_x, normalized_y))
                 elif cell == 1:
                     self.ships.add(Ship(normalized_x, normalized_y))
-                elif cell == 2:
-                    self.highlight = Highlight(normalized_x, normalized_y)
-                    self.seas.add(Sea(normalized_x, normalized_y))
-                elif cell == 3:
-                    self.highlight = Highlight(normalized_x, normalized_y)
-                    self.ships.add(Ship(normalized_x, normalized_y))
+                elif cell == 4:
+                    self.ships.add(Hit(normalized_x, normalized_y))
+                elif cell == 5:
+                    self.ships.add(Miss(normalized_x, normalized_y))
 
         self.all_sprites.add(
             self.seas,
             self.ships,
+            self.hits,
+            self.misses,
             self.highlight
         )
 
@@ -63,16 +73,10 @@ class Game:
             start_y, start_x, direction = self._find_start(ship_lengths[i])
             if direction == "down":
                 for n in range(ship_lengths[i]):
-                    if board[start_y+n][start_x] == 2:
-                        board[start_y+n][start_x] = 3
-                    else:
-                        board[start_y+n][start_x] = 1
+                    board[start_y+n][start_x] = 1
             else:
                 for n in range(ship_lengths[i]):
-                    if board[start_y][start_x+n] == 2:
-                        board[start_y][start_x+n] = 3
-                    else:
-                        board[start_y][start_x+n] = 1
+                    board[start_y][start_x+n] = 1
         return board
 
     def _find_start(self, length):
@@ -80,3 +84,21 @@ class Game:
         if direction == 1:
             return (random.randint(0, 9-length), random.randint(0, 9), "down")
         return (random.randint(0, 9), random.randint(0, 9-length), "right")
+
+    def shoot(self):
+        x = self.highlight.rect.x
+        y = self.highlight.rect.y
+        shot_x = x // self.cell_size
+        shot_y = y // self.cell_size
+        cell = self.board[shot_y][shot_x]
+        if cell == 1:
+            self.shots_to_target += 1
+            self.shots += 1
+            self.board[shot_y][shot_x] = 4
+            self._initialize_sprites(x, y)
+        elif cell in (4, 5):
+            pass
+        else:
+            self.shots += 1
+            self.board[shot_y][shot_x] = 5
+            self._initialize_sprites(x, y)

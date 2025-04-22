@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus on laivanupotuspeli, eli vuoropohjainen peli, jossa pelaaja ja vastustaja yrittävät vuorotellen osua toistensa laivoihin. Voittaja on se, joka on ensin upottanut toisen pelaajan kaikki laivat.
+Sovellus on laivanupotuspeli, jossa pelaaja yrittää upottaa laivat mahdollisimman vähillä osumilla.
 
 ## Käyttäjät
 
@@ -22,18 +22,18 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 
 - Käyttäjä voi aloittaa uuden pelin ***tehty***
 - Sovellus generoi pelilaudan ***tehty***
-- Sovellus generoi _vastustajan_ pelilaudan.
 - Käyttäjä voi liikuttaa kohdistinta pelilaudalla ***tehty***
-- Käyttäjä voi tehdä uuden siirron aloitetussa pelissä (jos on hänen vuoronsa).
+- Käyttäjä voi tehdä uuden siirron aloitetussa pelissä. ***tehty***
 - Käyttäjä näkee oman siirtonsa tuloksen:
-  - Osui
+  - Osui ***tehty***
   - Osui ja upposi
-  - Ohi
-- Käyttäjä näkee _vastustajan_ tekemän siirron.
+  - Ohi ***tehty***
 - Käyttäjä voi kirjautua ulos näkymästä. ***tehty***
 
 ## Jatkokehitysideoita
 
 - Käyttäjä voi itse luoda pelilaudan.
-- Käyttäjä voi kutsua toisen rekisteröityneen käyttäjän pelaamaan.
+- Vuoropelimahdollisuus:
+  - Käyttäjä voi pelata "tekoälyä" vastaan TAI
+  - Käyttäjä voi kutsua toisen rekisteröityneen käyttäjän pelaamaan.
 - Käyttäjä voi kieltäytyä pelistä/poistaa pelin.

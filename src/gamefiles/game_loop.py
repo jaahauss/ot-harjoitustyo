@@ -22,6 +22,8 @@ class GameLoop:
     def _handle_events(self):
         for event in self._event_queue.get():
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    self._game.shoot()
                 if event.key == pygame.K_LEFT:
                     self._game.move_highlight(dx=-self._cell_size)
                 if event.key == pygame.K_RIGHT:

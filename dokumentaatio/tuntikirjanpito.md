@@ -25,4 +25,5 @@
 |       | 1  | dokumentaation päivitys  |
 |  15.4. | 0.5  | kansiorakenteen järjestely  |
 |       | 1  | testien lisäys  |
-|       | **24**| **yhteensä**            |
+|  22.4. | 4  | ampuminen ja laskurit toteutettu  |
+|       | **28**| **yhteensä**            |
