@@ -26,4 +26,5 @@
 |  15.4. | 0.5  | kansiorakenteen järjestely  |
 |       | 1  | testien lisäys  |
 |  22.4. | 4  | ampuminen ja laskurit toteutettu  |
-|       | **28**| **yhteensä**            |
+|  23.4. | 3  | pelilogiikkaa parannettu  |
+|       | **31**| **yhteensä**            |

@@ -25,3 +25,5 @@
 
 - Laivojen ampuminen toteutettu
 - Laskurit ampumisille ja osumille lisätty
+- Toteutettu laivojen luominen siten, että ne eivät ole päällekäin tai vierekkäin
+- Piilotettu laivat alkutilanteessa käyttäjältä
