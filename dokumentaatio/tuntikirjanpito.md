@@ -27,4 +27,6 @@
 |       | 1  | testien lisäys  |
 |  22.4. | 4  | ampuminen ja laskurit toteutettu  |
 |  23.4. | 3  | pelilogiikkaa parannettu  |
-|       | **31**| **yhteensä**            |
+|  24.4. | 2  | laivan uppoamisen tarkistus toteutettu  |
+|  25.4. | 1  | lisätty uponneelle laivalle oma sprite  |
+|       | **34**| **yhteensä**            |

@@ -26,7 +26,7 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 - Käyttäjä voi tehdä uuden siirron aloitetussa pelissä. ***tehty***
 - Käyttäjä näkee oman siirtonsa tuloksen:
   - Osui ***tehty***
-  - Osui ja upposi
+  - Osui ja upposi ***tehty***
   - Ohi ***tehty***
 - Käyttäjä voi kirjautua ulos näkymästä. ***tehty***
 

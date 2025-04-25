@@ -24,6 +24,6 @@
 ## Viikko 6
 
 - Laivojen ampuminen toteutettu
-- Laskurit ampumisille ja osumille lisätty
+- Laskurit ampumisille, osumille ja uponneille laivoille lisätty
 - Toteutettu laivojen luominen siten, että ne eivät ole päällekäin tai vierekkäin
 - Piilotettu laivat alkutilanteessa käyttäjältä

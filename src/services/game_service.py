@@ -68,7 +68,7 @@ class GameService:
 
         pygame.init()
         pygame.display.set_caption("Battleship")
-        screen = pygame.display.set_mode((500, 560))
+        screen = pygame.display.set_mode((500, 580))
         game = Game(board, cell_size)
         event_queue = EventQueue()
         renderer = Renderer(screen, game)

@@ -14,8 +14,11 @@ class Renderer:
         text_1 = self._fontti.render(
             f"Shots: {self._game.shots}", True, (255, 0, 0))
         text_2 = self._fontti.render(
-            f"Shots to target: {self._game.shots_to_target} out of 16", True, (0, 128, 0))
+            f"Shots to target: {self._game.shots_to_target} out of 16", True, (255, 255, 0))
+        text_3 = self._fontti.render(
+            f"Sunken ships: {self._game.sunken_ships} out of 5", True, (0, 128, 0))
         self._screen.blit(text_1, (0, 510))
         self._screen.blit(text_2, (0, 530))
+        self._screen.blit(text_3, (0, 550))
 
         pygame.display.update()
