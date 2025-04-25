@@ -27,8 +27,9 @@ class StubClock:
 
 
 class StubEvent:
-    def __init__(self, event_type):
+    def __init__(self, event_type, key):
         self.type = event_type
+        self.key = key
 
 
 class StubEventQueue:
@@ -50,7 +51,12 @@ class TestGameLoop(unittest.TestCase):
 
     def test_game_loop(self):
         events = [
-            StubEvent(pygame.QUIT),
+            StubEvent(pygame.KEYDOWN, pygame.K_SPACE),
+            StubEvent(pygame.KEYDOWN, pygame.K_LEFT),
+            StubEvent(pygame.KEYDOWN, pygame.K_RIGHT),
+            StubEvent(pygame.KEYDOWN, pygame.K_UP),
+            StubEvent(pygame.KEYDOWN, pygame.K_DOWN),
+            StubEvent(pygame.QUIT, None)
         ]
 
         game_loop = GameLoop(
