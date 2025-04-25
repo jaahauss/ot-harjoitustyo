@@ -27,3 +27,4 @@
 - Laskurit ampumisille, osumille ja uponneille laivoille lisätty
 - Toteutettu laivojen luominen siten, että ne eivät ole päällekäin tai vierekkäin
 - Piilotettu laivat alkutilanteessa käyttäjältä
+- Game over -näkymä luotu

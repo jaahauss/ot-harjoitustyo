@@ -145,3 +145,8 @@ class Game:
                     self.board[coordinate[0]][coordinate[1]] = 4
                 return True
         return False
+
+    def check_game_over(self):
+        if self.sunken_ships == 5:
+            return True
+        return False

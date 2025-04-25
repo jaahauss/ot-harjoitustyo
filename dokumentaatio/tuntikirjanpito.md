@@ -29,4 +29,6 @@
 |  23.4. | 3  | pelilogiikkaa parannettu  |
 |  24.4. | 2  | laivan uppoamisen tarkistus toteutettu  |
 |  25.4. | 1  | lisätty uponneelle laivalle oma sprite  |
-|       | **34**| **yhteensä**            |
+|       | 2  | testien lisäys  |
+|       | 1  | game over -näkymän tekeminen  |
+|       | **37**| **yhteensä**            |
