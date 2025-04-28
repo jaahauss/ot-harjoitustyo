@@ -31,4 +31,6 @@
 |  25.4. | 1  | lisätty uponneelle laivalle oma sprite  |
 |       | 2  | testien lisäys  |
 |       | 1  | game over -näkymän tekeminen  |
-|       | **37**| **yhteensä**            |
+|  28.4. | 0.5  | kansiorakenteen päivitys  |
+|       | 0.5  | testejä lisätty |
+|       | **38**| **yhteensä**            |

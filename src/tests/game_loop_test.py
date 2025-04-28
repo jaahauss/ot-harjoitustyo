@@ -1,8 +1,8 @@
 import unittest
 import pygame
 
-from gamefiles.game import Game
-from gamefiles.game_loop import GameLoop
+from game_files.game import Game
+from game_files.game_loop import GameLoop
 
 test_board = [[0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
               [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],

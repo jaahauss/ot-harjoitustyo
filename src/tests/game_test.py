@@ -1,5 +1,5 @@
 import unittest
-from gamefiles.game import Game
+from game_files.game import Game
 
 test_board = [[0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
               [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
