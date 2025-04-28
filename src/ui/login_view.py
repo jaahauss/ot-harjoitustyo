@@ -3,7 +3,16 @@ from services.game_service import game_service, InvalidCredentialsError
 
 
 class LoginView:
+    """Kirjautumisnäkymästä vastaava luokka.
+    """
     def __init__(self, root, handle_login, handle_create):
+        """Luokan konstruktori.
+
+        Args:
+            root: Näkymän alustukseen käytettävä TKinter-elementti.
+            handle_login: Kirjautumisnäkymääm kutsuttava arvo.
+            handle_create: Käyttäjänluomis-näkymään kutsuttava arvo.
+        """
         self._root = root
         self._handle_login = handle_login
         self._handle_create = handle_create
@@ -14,12 +23,18 @@ class LoginView:
         self._start()
 
     def pack(self):
+        """Näyttää näkymän.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän.
+        """
         self._frame.destroy()
 
     def _login_handler(self):
+        """Käsittelee kirjautumisen.
+        """
         username = self._username_entry.get()
         password = self._password_entry.get()
 
@@ -30,6 +45,8 @@ class LoginView:
             messagebox.showerror("Error", "Invalid username or password")
 
     def _start(self):
+        """Luo elementit näkymään.
+        """
         self._frame = ttk.Frame(master=self._root)
 
         username_label = ttk.Label(master=self._frame, text="Username")

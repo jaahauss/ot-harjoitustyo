@@ -3,6 +3,8 @@ from ui.ui import UI
 
 
 def main():
+    """Alustaa ja käynnistää käyttöliittymän.
+    """
     window = Tk()
     window.title("Battleship game")
 

@@ -33,4 +33,5 @@
 |       | 1  | game over -näkymän tekeminen  |
 |  28.4. | 0.5  | kansiorakenteen päivitys  |
 |       | 0.5  | testejä lisätty |
-|       | **38**| **yhteensä**            |
+|       | 3  | dokumentaation päivitys |
+|       | **41**| **yhteensä**            |

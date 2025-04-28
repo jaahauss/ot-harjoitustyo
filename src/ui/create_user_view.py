@@ -3,7 +3,16 @@ from services.game_service import game_service, UsernameExistsError
 
 
 class CreateUserView:
+    """Käyttäjänluomis-näkymästä vastaava luokka.
+    """
     def __init__(self, root, handle_create, handle_login):
+        """Luokan konstruktori.
+
+        Args:
+            root: Näkymän alustukseen käytettävä TKinter-elementti.
+            handle_create: Käyttäjänluomis-näkymään kutsuttava arvo.
+            handle_login: Kirjautumisnäkymääm kutsuttava arvo.
+        """
         self._root = root
         self._handle_create = handle_create
         self._handle_login = handle_login
@@ -14,12 +23,18 @@ class CreateUserView:
         self._start()
 
     def pack(self):
+        """Näyttää näkymän.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän.
+        """
         self._frame.destroy()
 
     def _create_user_handler(self):
+        """Käsittelee käyttäjän luomisen.
+        """
         username = self._username_entry.get()
         password = self._password_entry.get()
 
@@ -39,6 +54,8 @@ class CreateUserView:
                 "Error", f"Username {username} already exists")
 
     def _start(self):
+        """Luo elementit näkymään.
+        """
         self._frame = ttk.Frame(master=self._root)
 
         username_label = ttk.Label(master=self._frame, text="Username")

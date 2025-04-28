@@ -3,6 +3,8 @@ from services.game_service import game_service
 
 
 class GameView:
+    """Pelinaloitus-näkymästä vastaava luokka.
+    """
     def __init__(self, root, handle_logout):
         self._root = root
         self._handle_logout = handle_logout
@@ -12,19 +14,29 @@ class GameView:
         self._start()
 
     def pack(self):
+        """Näyttää näkymän.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän.
+        """
         self._frame.destroy()
 
     def _logout_handler(self):
+        """Käsittelee uloskirjautumisen.
+        """
         game_service.logout()
         self._handle_logout()
 
     def _start_game(self):
+        """Käsittelee pelin aloituksen.
+        """
         game_service.start()
 
     def _start(self):
+        """Luo elementit näkymään.
+        """
         self._frame = ttk.Frame(master=self._root)
 
         game_button = ttk.Button(

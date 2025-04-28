@@ -2,6 +2,8 @@
 
 ## Rakenne
 
+![Luokka/pakkauskaavio](./kuvat/arkkitehtuuri-pakkaus.png)
+
 Pakkauksessa _ui_ on käyttöliittymästä, _services_ sovelluslogiikasta ja _repositories_ tietojen pysyväistallennuksesta vastaavaa koodia. Pakkaus _entities_ sisältää käyttäjiä kuvaavan luokan. Pakkauksessa _gamefiles_ on pelistä vastaavaa koodia.
 
 ## Käyttöliittymä

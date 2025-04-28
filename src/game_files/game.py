@@ -9,7 +9,16 @@ from game_files.sprites.highlight import Highlight
 
 
 class Game:
+    """Pelistä vastaava luokka.
+    """
+
     def __init__(self, board, cell_size):
+        """Luokan konstruktori.
+
+        Args:
+            board: Pelilautaa kuvaava lista
+            cell_size: Solun kokoa kuvaava kokonaisluku
+        """
         self.cell_size = cell_size
         self.ships = pygame.sprite.Group()
         self.seas = pygame.sprite.Group()
@@ -29,6 +38,12 @@ class Game:
         self._initialize_sprites(target_x, target_y)
 
     def _initialize_sprites(self, target_x, target_y):
+        """Alustaa pelin spritet.
+
+        Args:
+            target_x: Tähtäimen x-koordinaattia kuvaava kokonaisluku
+            target_y: Tähtäimen y-koordinaattia kuvaava kokonaisluku
+        """
         height = len(self.board)
         width = len(self.board[0])
         self.highlight = Highlight(target_x, target_y)
@@ -59,10 +74,27 @@ class Game:
         )
 
     def move_highlight(self, dx=0, dy=0):
+        """Liikuttaa tähtäintä pelilaudalla.
+
+        Args:
+           dx: Vapaaehtoinen, oletusarvoltaan 0, x-suuntaista liikettä kuvaava kokonaisluku
+           dy: Vapaaehtoinen, oletusarvoltaan 0, y-suuntaista liikettä kuvaava kokonaisluku
+        """
         if self._check_collision(dx, dy):
             self.highlight.rect.move_ip(dx, dy)
 
     def _check_collision(self, dx, dy):
+        """Tarkistaa, että tähtäin pysyy peliaudan sisällä.
+
+        Args:
+            dx: Tähtäimen x-suuntaista liikettä kuvaava kokonaisluku
+            dy: Tähtäimen y-suuntaista liikettä kuvaava kokonaisluku
+
+        Returns:
+            Palauttaa False, jos tähtäimen liikuttaminen aiheuttaisi
+                tähtäimen koordinaattien siirtymisen pelilaudan ulkopuolelle.
+            Muussa tapauksessa palauttaa True.  
+        """
         if dx < 0 and self.highlight.rect.x <= 0:
             return False
         if dx > 0 and self.highlight.rect.x >= 450:
@@ -74,6 +106,14 @@ class Game:
         return True
 
     def _add_ships(self, board):
+        """Vastaa laivojen lisäämisestä pelilaudalle.
+
+        Args:
+            board: Pelilautaa kuvaava lista
+
+        Returns:
+            Palauttaa pelilautaa kuvaavan listan.
+        """
         ship_lengths = [5, 4, 3, 2, 2]
         self.added_ships = []
         for i in range(5):
@@ -85,24 +125,28 @@ class Game:
                 if direction == "down":
                     valid_position = self._check_valid_position(
                         ship_lengths[i], coordinate_1, coordinate_2, board)
-                    if valid_position:
-                        ship = []
-                        for n in range(ship_lengths[i]):
-                            board[coordinate_1+n][coordinate_2] = 1
-                            ship.append((coordinate_1+n, coordinate_2))
-                        self.added_ships.append(ship)
                 else:
                     valid_position = self._check_valid_position(
                         ship_lengths[i], coordinate_2, coordinate_1, board)
-                    if valid_position:
-                        ship = []
-                        for n in range(ship_lengths[i]):
-                            board[coordinate_2][coordinate_1+n] = 1
-                            ship.append((coordinate_2, coordinate_1+n))
-                        self.added_ships.append(ship)
+                if valid_position:
+                    self._create_ships(
+                        ship_lengths[i], coordinate_1, coordinate_2, direction, board)
         return board
 
     def _check_valid_position(self, length, c_1, c_2, board):
+        """Tarkistaa, onko laivan paikka validi.
+
+        Args:
+            length: Laivan pituutta kuvaava kokonaisluku
+            c_1: Laivan ensimmäisen ruudun paikan koordinaattia kuvaava kokonaisluku
+            c_2: Laivan ensimmäisen ruudun paikan koordinaattia kuvaava kokonaisluku
+            board: Pelilautaa kuvaava lista
+
+        Returns:
+            Palauttaa False,
+                jos uusi laiva tulisi päällekäin tai vierekkäin olemassaolevan laivan kanssa.
+            Muussa tapauksessa palauttaa True.
+        """
         for n in range(c_1-1, c_1+length+1):
             for m in range(c_2-1, c_2+length+1):
                 if m < 0 or n < 0 or m > 9 or n > 9:
@@ -111,7 +155,30 @@ class Game:
                     return False
         return True
 
+    def _create_ships(self, length, c_1, c_2, direction, board):
+        """Luo laivat pelilaudalle ja lisää ne lisättyjen laivojen listalle.
+
+        Args:
+            length: Laivan pituutta kuvaava kokonaisluku
+            c_1: Laivan ensimmäisen ruudun paikan koordinaattia kuvaava kokonaisluku
+            c_2: Laivan ensimmäisen ruudun paikan koordinaattia kuvaava kokonaisluku
+            direction: Laivan suuntautumista pelilaudalla kuvaava merkkijono
+            board: Pelilautaa kuvaava lista
+        """
+        ship = []
+        if direction == "down":
+            for n in range(length):
+                board[c_1+n][c_2] = 1
+                ship.append((c_1+n, c_2))
+        else:
+            for n in range(length):
+                board[c_2][c_1+n] = 1
+                ship.append((c_2, c_1+n))
+        self.added_ships.append(ship)
+
     def shoot(self):
+        """Vastaa ampumisesta vaihtamalla pelilaudan solun arvon vastaamaan ampumisen tulosta.
+        """
         x = self.highlight.rect.x
         y = self.highlight.rect.y
         shot_x = x // self.cell_size
@@ -132,6 +199,16 @@ class Game:
             self._initialize_sprites(x, y)
 
     def _check_sunken(self, y, x):
+        """Tarkistaa, onko laiva uponnut.
+
+        Args:
+            y: Osuneen ammuksen y-koordinaattia kuvaava kokonaisluku
+            x: Osuneen ammuksen x-koordinaattia kuvaava kokonaisluku
+
+        Returns:
+            Palauttaa True, jos laiva on uponnut (kaikkiin sen osiin on osuttu).
+            Muussa tapauksessa palauttaa False.
+        """
         for ship in self.added_ships:
             checker_1 = 0
             checker_2 = 0
@@ -147,6 +224,12 @@ class Game:
         return False
 
     def check_game_over(self):
+        """Tarkistaa, onko peli ohi.
+
+        Returns:
+            Palauttaa True, jos upotettuja laivoja on 5.
+            Muussa tapauksessa palauttaa False.
+        """
         if self.sunken_ships == 5:
             return True
         return False

@@ -6,4 +6,9 @@ connection.row_factory = sqlite3.Row
 
 
 def get_database_connection():
+    """Hakee tietokantayhteyden.
+
+        Returns:
+            Palauttaa tietokantayhteyden Connection-olion.
+        """
     return connection

@@ -7,7 +7,12 @@ from game_files.clock import Clock
 
 
 class GameStart:
+    """Pelin aloituksesta vastaava luokka.
+    """
+
     def __init__(self):
+        """Luokan konstruktori, joka määrittelee tyhjän pelilaudan ja solun koon.
+        """
         self.board = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -21,6 +26,8 @@ class GameStart:
         self.cell_size = 50
 
     def start(self):
+        """Kutsuu peliin tarvittavia luokkia ja aloittaa pelin.
+        """
         pygame.init()
         game = Game(self.board, self.cell_size)
         event_queue = EventQueue()

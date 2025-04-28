@@ -10,6 +10,7 @@ Vuoropohjainen laivanupotus-peli, jossa tarkoituksena upottaa toisen pelaajan ka
 - [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 - [Changelog](dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
+- [Käyttöohje](./dokumentaatio/kayttoohje.md)
 
 ## Asennus
 
