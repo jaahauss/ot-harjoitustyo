@@ -1,9 +1,4 @@
-import pygame
-from gamefiles.game import Game
-from gamefiles.game_loop import GameLoop
-from gamefiles.event_queue import EventQueue
-from gamefiles.renderer import Renderer
-from gamefiles.clock import Clock
+from game_files.game_start import GameStart
 
 from entities.user import User
 
@@ -54,27 +49,8 @@ class GameService:
         return user
 
     def start(self):
-        board = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-        cell_size = 50
-
-        pygame.init()
-        pygame.display.set_caption("Battleship")
-        screen = pygame.display.set_mode((500, 580))
-        game = Game(board, cell_size)
-        event_queue = EventQueue()
-        renderer = Renderer(screen, game)
-        clock = Clock()
-        game_loop = GameLoop(game, renderer, event_queue, clock, cell_size)
-        game_loop.start()
+        game_start = GameStart()
+        game_start.start()
 
 
 game_service = GameService()

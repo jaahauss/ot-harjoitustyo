@@ -1,12 +1,12 @@
 import pygame
-from gamefiles.load_image import load_image
+from game_files.load_image import load_image
 
 
-class Ship(pygame.sprite.Sprite):
+class Highlight(pygame.sprite.Sprite):
     def __init__(self, x=0, y=0):
         super().__init__()
 
-        self.image = load_image("ship.png")
+        self.image = load_image("highlight.png")
 
         self.rect = self.image.get_rect()
         self.rect.x = x

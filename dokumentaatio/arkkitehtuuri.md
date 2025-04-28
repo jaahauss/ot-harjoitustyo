@@ -2,9 +2,35 @@
 
 ## Rakenne
 
+Pakkauksessa _ui_ on käyttöliittymästä, _services_ sovelluslogiikasta ja _repositories_ tietojen pysyväistallennuksesta vastaavaa koodia. Pakkaus _entities_ sisältää käyttäjiä kuvaavan luokan. Pakkauksessa _gamefiles_ on pelistä vastaavaa koodia.
+
+## Käyttöliittymä
+
+Käyttöliittymä sisältää viisi näkymää. Näistä kolme on toteutettu UI-luokkina, joista vain yksi on kerrallaan näkyvillä. Ne ovat:
+- Kirjautumisnäkymä
+- Käyttäjän luomis -näkymä
+- Pelin aloitus -näkymä
+
+Tämän lisäksi on kaksi erillistä pygame-näkymää, jotka on toteutettu Render-luokan kautta:
+- Pelinäkymä
+- Game Over -näkymä
+
+Joko pelinäkymä tai Game Over -näkymä voi olla auki samaan aikaan Pelin aloitus -näkymän kanssa, mutta eri ikkunassa.
+
+Pelinäkymä päivittyy käyttäjän tekemien siirtojen mukaan käyttäen all_sprites.draw -metodia.
+
+Käyttöliittymät on pyritty toteuttamaan erillään sovelluslogiikasta.
+
+## Sovelluslogiikka
 Luokka/pakkauskaavio:
 
 ![Luokka/pakkauskaavio](./kuvat/arkkitehtuuri-pakkaus-luokat.png)
+
+##Tietojen pysyväistallennus
+
+UserRepository-luokka huolehtii käyttäjätietojen tallentamisesta. Tiedot tallennettaan SQLite-tietokantaan. Luokat noudattavat Repository-suunnittelumallia.
+
+Sovelluslogiikan testauksessa tiedot tallennetaan keskusmuistiin tietokannan sijaan.
 
 ## Päätoiminnallisuudet
 

@@ -2,13 +2,14 @@ import pygame
 
 
 class Renderer:
-    def __init__(self, screen, game):
-        self._screen = screen
+    def __init__(self, game):
+        self._screen = pygame.display.set_mode((500, 580))
         self._game = game
         self._fontti = pygame.font.SysFont("Arial", 24)
         self._fontti_big = pygame.font.SysFont("Arial", 48)
 
     def render(self):
+        pygame.display.set_caption("Battleship")
         if self._game.check_game_over():
             self._screen.fill((0, 0, 0))
             text_1 = self._fontti_big.render("GAME OVER", True, (0, 128, 0))

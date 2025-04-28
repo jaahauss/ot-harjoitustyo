@@ -1,11 +1,11 @@
 import random
 import pygame
-from gamefiles.sprites.sea import Sea
-from gamefiles.sprites.ship import Ship
-from gamefiles.sprites.hit import Hit
-from gamefiles.sprites.miss import Miss
-from gamefiles.sprites.shipwreck import Shipwreck
-from gamefiles.sprites.highlight import Highlight
+from game_files.sprites.sea import Sea
+from game_files.sprites.ship import Ship
+from game_files.sprites.hit import Hit
+from game_files.sprites.miss import Miss
+from game_files.sprites.shipwreck import Shipwreck
+from game_files.sprites.highlight import Highlight
 
 
 class Game:

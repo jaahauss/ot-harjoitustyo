@@ -15,7 +15,8 @@ class FakeUserRepository:
         return self.users
 
     def find_by_username(self, username):
-        matching_users = filter(lambda user: user.username == username, self.users)
+        matching_users = filter(
+            lambda user: user.username == username, self.users)
 
         matching_users_list = list(matching_users)
 
@@ -40,6 +41,8 @@ class TestGameService(unittest.TestCase):
         self.game_service.create_user(user.username, user.password)
 
     def test_login_correctly(self):
-        self.game_service.create_user(self.user_u1.username, self.user_u1.password)
-        user = self.game_service.login(self.user_u1.username, self.user_u1.password)
+        self.game_service.create_user(
+            self.user_u1.username, self.user_u1.password)
+        user = self.game_service.login(
+            self.user_u1.username, self.user_u1.password)
         self.assertEqual(user.username, self.user_u1.username)

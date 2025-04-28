@@ -1,5 +1,5 @@
 import pygame
-from gamefiles.load_image import load_image
+from game_files.load_image import load_image
 
 
 class Sea(pygame.sprite.Sprite):

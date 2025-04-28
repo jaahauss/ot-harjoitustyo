@@ -35,4 +35,3 @@ class TestGame(unittest.TestCase):
 
         self.test_game.move_highlight(dx=+3*cell_size)
         self.assert_coordinates_equal(test_highlight, 3*cell_size, cell_size)
-
