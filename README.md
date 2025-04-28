@@ -2,7 +2,7 @@
 
 ## Harjoitustyön kuvaus
 
-Vuoropohjainen laivanupotus-peli, jossa tarkoituksena upottaa toisen pelaajan kaikki laivat. Tarkempi kuvaus löytyy vaatimusmäärittelystä.
+Laivanupotus-peli, jossa tarkoituksena upottaa kaikki sovelluksen luomat laivat. Tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
 ## Dokumentaatio
 
