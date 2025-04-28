@@ -14,6 +14,7 @@ Suorita vaadittavat alustustoimenpiteet komennolla:
 
 ```bash
 poetry run invoke build
+```
 
 Aloita ohjelman suoritus komennolla:
 
