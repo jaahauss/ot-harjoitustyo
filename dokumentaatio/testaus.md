@@ -8,7 +8,7 @@ Testauksesta vastaavat luokat löytyvät [tests](https://github.com/jaahauss/ot-
 
 ### Testauskattavuus
 
-Harjoitustyön ohjeistuksen mukaan käyttöliittymää ei ole testattu. Testauksen haarautumakattavuus on
+Harjoitustyön ohjeistuksen mukaan käyttöliittymää ei ole testattu. Testauksen haarautumakattavuus on 82%.
 
 ![](./kuvat/testikattavuus.png)
 
