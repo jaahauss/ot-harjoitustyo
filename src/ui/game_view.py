@@ -5,6 +5,7 @@ from services.game_service import game_service
 class GameView:
     """Pelinaloitus-näkymästä vastaava luokka.
     """
+
     def __init__(self, root, handle_logout):
         self._root = root
         self._handle_logout = handle_logout

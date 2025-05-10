@@ -34,4 +34,5 @@
 |  28.4. | 0.5  | kansiorakenteen päivitys  |
 |       | 0.5  | testejä lisätty |
 |       | 3  | dokumentaation päivitys |
-|       | **41**| **yhteensä**            |
+|  9.5. | 2  | hienosäätöä  |
+|       | **43**| **yhteensä**            |

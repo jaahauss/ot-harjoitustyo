@@ -130,7 +130,7 @@ class Game:
                         ship_lengths[i], coordinate_2, coordinate_1, board)
                 if valid_position:
                     self._create_ships(
-                        ship_lengths[i], coordinate_1, coordinate_2, direction, board)
+                        ship_lengths[i], (coordinate_1, coordinate_2), direction, board)
         return board
 
     def _check_valid_position(self, length, c_1, c_2, board):
@@ -155,7 +155,7 @@ class Game:
                     return False
         return True
 
-    def _create_ships(self, length, c_1, c_2, direction, board):
+    def _create_ships(self, length, c, direction, board):
         """Luo laivat pelilaudalle ja lisää ne lisättyjen laivojen listalle.
 
         Args:
@@ -166,6 +166,8 @@ class Game:
             board: Pelilautaa kuvaava lista
         """
         ship = []
+        c_1 = c[0]
+        c_2 = c[1]
         if direction == "down":
             for n in range(length):
                 board[c_1+n][c_2] = 1

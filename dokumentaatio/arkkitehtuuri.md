@@ -23,12 +23,7 @@ Pelinäkymä päivittyy käyttäjän tekemien siirtojen mukaan käyttäen all_sp
 
 Käyttöliittymät on pyritty toteuttamaan erillään sovelluslogiikasta.
 
-## Sovelluslogiikka
-Luokka/pakkauskaavio:
-
-![Luokka/pakkauskaavio](./kuvat/arkkitehtuuri-pakkaus-luokat.png)
-
-##Tietojen pysyväistallennus
+## Tietojen pysyväistallennus
 
 UserRepository-luokka huolehtii käyttäjätietojen tallentamisesta. Tiedot tallennettaan SQLite-tietokantaan. Luokat noudattavat Repository-suunnittelumallia.
 
@@ -51,3 +46,11 @@ Käyttäjä kirjautuu kirjoittamalla olemassa olevan käyttäjätunnuksen ja sal
 ### Pelin aloittaminen
 
 Peli aloitetaan painamalla "Start Game"-nappia. Napin painaminen kutsuu GameServicen start-metodia, joka puolestaan kutsuu parametreilla board ja cell_size Game-luokkaa. Pelin alkuvalmistelut tehdään Gamen add_new_ships ja initialize_sprites -metodeilla, jonka jälkeen GameService käynnistää pygame-ikkunan.
+
+### Pelaaminen
+
+Pelaaminen voidaan jakaa kahteen toiminnallisuuteen: liikkumiseen ja ampumiseen
+
+Liikkuminen tehdään nuolinäppäimillä. Nuolinäppäimen painaminen kutsuu Game-luokan move_highlight -metodia, joka päivittää tähtäimen koordinaatit.
+
+Ampuminen tehdään painamalla välilyöntiä, joka kutsuu Game-luokan shoot-metodia, joka päivittää pelilaudan (_board_).

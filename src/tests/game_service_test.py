@@ -38,7 +38,7 @@ class TestGameService(unittest.TestCase):
     def create_user(self, user):
         self.game_service.create_user(user.username, user.password)
 
-    def test_create_user(self):
+    def test_create_user_new(self):
         self.game_service.create_user(
             self.user_u1.username, self.user_u1.password)
         users = self.game_service.get_users()
@@ -46,17 +46,21 @@ class TestGameService(unittest.TestCase):
         self.assertEqual(len(users), 1)
         self.assertEqual(users[0].username, self.user_u1.username)
         self.assertEqual(users[0].password, self.user_u1.password)
-
+    
+    def test_create_user_exists(self):
+        self.game_service.create_user(
+            self.user_u1.username, self.user_u1.password)
         self.assertRaises(UsernameExistsError, lambda: self.game_service.create_user(
             self.user_u1.username, 'password'))
 
-    def test_login(self):
+    def test_login_right(self):
         self.game_service.create_user(
             self.user_u1.username, self.user_u1.password)
         user = self.game_service.login(
             self.user_u1.username, self.user_u1.password)
 
         self.assertEqual(user.username, self.user_u1.username)
-
+    
+    def test_login_wrong(self):
         self.assertRaises(InvalidCredentialsError,
-                          lambda: self.game_service.login(user.username, 'wrong'))
+                          lambda: self.game_service.login('wrong', 'wrong'))

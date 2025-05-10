@@ -15,6 +15,14 @@ class UsernameExistsError(Exception):
     pass
 
 
+class MissingUsernameError(Exception):
+    pass
+
+
+class MissingPasswordError(Exception):
+    pass
+
+
 class GameService:
     """Sovelluslogiikasta vastaava luokka.
     """
@@ -83,7 +91,16 @@ class GameService:
 
         Raises:
            UsernameExistsError: Virhe, joka tapahtuu, jos käyttäjätunnus on jo olemassa.
+           MissingUsernameError: Virhe, joka tapahtuu,
+           jos käyttäjätunnuksesksi annetaan tyhjä syöte.
+           MissingPasswordError: Virhe, joka tapahtuu, jos salasanaksi annetaan tyhjä syöte.
         """
+        if len(username) == 0:
+            raise MissingUsernameError("Username is required")
+
+        if len(password) == 0:
+            raise MissingPasswordError("Password is required")
+
         existing_user = self._user_repository.find_by_username(username)
         if existing_user:
             raise UsernameExistsError(f"Username {username} already exists")

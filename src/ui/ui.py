@@ -6,6 +6,7 @@ from ui.create_user_view import CreateUserView
 class UI:
     """Sovelluksen käyttöliittymästä vastaava luokka.
     """
+
     def __init__(self, root):
         """Luokan konstruktori.
 

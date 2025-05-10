@@ -12,23 +12,24 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen ***tehty***
-  - Käyttäjätunnuksen täytyy olla uniikki, muuten järjestelmä ilmoittaa tästä ***tehty***
-- Käyttäjä voi kirjautua järjestelmään ***tehty***
-  - Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus ja salasana kirjautumislomakkeelle ***tehty***
-  - Jos käyttäjätunnus tai salasana ei täsmää, ilmoittaa järjestelmä tästä ***tehty***
+- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
+  - Käyttäjätunnuksen täytyy olla uniikki, muuten järjestelmä ilmoittaa tästä 
+- Käyttäjä voi kirjautua järjestelmään
+  - Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus ja salasana kirjautumislomakkeelle
+  - Jos käyttäjätunnus tai salasana ei täsmää, ilmoittaa järjestelmä tästä
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä voi aloittaa uuden pelin ***tehty***
-- Sovellus generoi pelilaudan ***tehty***
-- Käyttäjä voi liikuttaa kohdistinta pelilaudalla ***tehty***
-- Käyttäjä voi tehdä uuden siirron aloitetussa pelissä. ***tehty***
+- Käyttäjä voi aloittaa uuden pelin
+- Sovellus generoi pelilaudan
+- Käyttäjä voi liikuttaa kohdistinta pelilaudalla
+- Käyttäjä voi tehdä uuden siirron aloitetussa pelissä.
 - Käyttäjä näkee oman siirtonsa tuloksen:
-  - Osui ***tehty***
-  - Osui ja upposi ***tehty***
-  - Ohi ***tehty***
-- Käyttäjä voi kirjautua ulos näkymästä. ***tehty***
+  - Osui
+  - Osui ja upposi
+  - Ohi
+- Käyttäjä voi lopettaa pelin
+- Käyttäjä voi kirjautua ulos näkymästä.
 
 ## Jatkokehitysideoita
 
@@ -36,4 +37,4 @@ Vain yksi käyttäjärooli, _pelaaja_ (normaali käyttäjä).
 - Vuoropelimahdollisuus:
   - Käyttäjä voi pelata "tekoälyä" vastaan TAI
   - Käyttäjä voi kutsua toisen rekisteröityneen käyttäjän pelaamaan.
-- Käyttäjä voi kieltäytyä pelistä/poistaa pelin.
+- Sovellus tallentaa käyttäjän parhaan tuloksen.

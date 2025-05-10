@@ -1,10 +1,11 @@
 from tkinter import ttk, messagebox, constants
-from services.game_service import game_service, UsernameExistsError
+from services.game_service import game_service, UsernameExistsError, MissingUsernameError, MissingPasswordError
 
 
 class CreateUserView:
     """Käyttäjänluomis-näkymästä vastaava luokka.
     """
+
     def __init__(self, root, handle_create, handle_login):
         """Luokan konstruktori.
 
@@ -38,17 +39,13 @@ class CreateUserView:
         username = self._username_entry.get()
         password = self._password_entry.get()
 
-        if len(username) == 0:
-            messagebox.showerror("Error", "Username is required")
-            return
-
-        if len(password) == 0:
-            messagebox.showerror("Error", "Password is required")
-            return
-
         try:
             game_service.create_user(username, password)
             self._handle_create()
+        except MissingUsernameError:
+            messagebox.showerror("Error", "Username is required")
+        except MissingPasswordError:
+            messagebox.showerror("Error", "Password is required")
         except UsernameExistsError:
             messagebox.showerror(
                 "Error", f"Username {username} already exists")

@@ -9,8 +9,9 @@ Laivanupotus-peli, jossa tarkoituksena upottaa kaikki sovelluksen luomat laivat.
 - [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
 - [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 - [Changelog](dokumentaatio/changelog.md)
-- [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
-- [Käyttöohje](./dokumentaatio/kayttoohje.md)
+- [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
+- [Käyttöohje](dokumentaatio/kayttoohje.md)
+- [Julkaistut versiot](releases/)
 
 ## Asennus
 

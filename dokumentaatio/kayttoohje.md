@@ -1,6 +1,14 @@
 # Käyttöohje
 
-Lataa projekti omalle koneelleesi.
+Lataa projektin viimeisimmän version _Source code_ omalle koneelleesi kohdasta [Releases](releases/).
+
+## Konfigurointi
+
+Käyttäjätietojen tallentamiseen käytettävän tietokanta-tiedoston nimen voi konfiguroida _.env_-tiedostossa, joka löytyy päähakemistosta. Tietokanta-tiedosto luodaan _data_hakemistoon. Esimerkki tiedoston nimeämisestä_
+
+```
+DATABASE_FILENAME=database.sqlite
+```
 
 ## Ohjelman käynnistäminen
 
@@ -58,12 +66,12 @@ Pelaaja näkee hudit punaisina risteinä, osumat keltaisina soluina ja uponneet 
  - Kuinka moni ammus on osunut kohteeseen
  - Kuinka monta laivaa on upotettu
  
- ![](./kuvat/kayttoohje-peli.png)
+![](./kuvat/kayttoohje-peli.png)
  
- ## Pelin lopetus
+## Pelin lopetus
  
- Pelin voi kesken sulkemalla peli-ikkunan.
+Pelin voi lopettaa kesken sulkemalla peli-ikkunan.
  
- Kun kaikki laivat on upotettu, näytetään "Game over"-näkymä, jossa kerrotaan kuinka monella ammuksella pelin läpäiseminen tapahtui.
+Kun kaikki laivat on upotettu, näytetään "Game over"-näkymä, jossa kerrotaan kuinka monella ammuksella pelin läpäiseminen tapahtui.
  
- ![](./kuvat/kayttoohje-gameover.png)
+![](./kuvat/kayttoohje-gameover.png)

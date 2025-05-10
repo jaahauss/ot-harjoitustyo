@@ -5,6 +5,7 @@ from services.game_service import game_service, InvalidCredentialsError
 class LoginView:
     """Kirjautumisnäkymästä vastaava luokka.
     """
+
     def __init__(self, root, handle_login, handle_create):
         """Luokan konstruktori.
 
