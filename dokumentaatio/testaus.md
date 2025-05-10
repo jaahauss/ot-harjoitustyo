@@ -4,7 +4,7 @@ Järjestelmätason testaus suoritettiin manuaalisesti. Yksikkö- ja integraatiot
 
 ## Yksikkö- ja integraatiotestaus
 
-Testauksesta vastaavat luokat löytyvät [tests](https://github.com/jaahauss/ot-harjoitustyo/blob/master/src/tests/)-kansiosta ja on nimetty logiikalla '(testattava luokka)_test.py'. Tallentamiseen käytettävien tiedostojen nimet on konfiguroitu _.env.test_-tiedostoon
+Testauksesta vastaavat luokat löytyvät [tests](https://github.com/jaahauss/ot-harjoitustyo/blob/master/src/tests/)-kansiosta. Sovelluslogiikan testauksesta vastaavat tiedostot on nimetty logiikalla '(testattava luokka)_test.py'. Repositoria testataan _repository_test.py_-tiedostolla. Tallentamiseen käytettävien tiedostojen nimet on konfiguroitu _.env.test_-tiedostoon
 
 ### Testauskattavuus
 
