@@ -35,4 +35,5 @@
 |       | 0.5  | testejä lisätty |
 |       | 3  | dokumentaation päivitys |
 |  9.5. | 2  | hienosäätöä  |
-|       | **43**| **yhteensä**            |
+|  10.5. | 2  | hienosäätöä, dokumentaation päiviys |
+|       | **45**| **yhteensä**            |
