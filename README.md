@@ -11,7 +11,8 @@ Laivanupotus-peli, jossa tarkoituksena upottaa kaikki sovelluksen luomat laivat.
 - [Changelog](dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 - [Käyttöohje](dokumentaatio/kayttoohje.md)
-- [Julkaistut versiot](releases/)
+- [Testausdokumentti](dokumentaatio/testaus.md)
+- [Julkaistut versiot](https://github.com/jaahauss/ot-harjoitustyo/releases/)
 
 ## Asennus
 
